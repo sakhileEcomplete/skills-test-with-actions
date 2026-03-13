@@ -58,13 +58,32 @@ def test_get_nth_fibonacci_one():
     assert result == 1
 
 
-# def test_get_nth_fibonacci_ten():
-#     """Test with n=10."""
-#     # Arrange
-#     n = 10
+def test_get_nth_fibonacci_ten():
+    """Test with n=10."""
+     # Arrange
+    n = 10
 
-#     # Act
-#     result = get_nth_fibonacci(n)
+     # Act
+    result = get_nth_fibonacci(n)
 
 #     # Assert
-#     assert result == 89
+    assert result == 55
+
+
+def test_area_of_circle_two():
+    """Test with radius 2."""
+    radius = 2
+    result = area_of_circle(radius)
+    assert abs(result - 12.56637) < 1e-5
+
+
+def test_get_nth_fibonacci_five():
+    """Test with n=5."""
+    n = 5
+    result = get_nth_fibonacci(n)
+    assert result == 5
+
+def test_get_nth_fibonacci_negative():
+    """Test negative input."""
+    with pytest.raises(ValueError):
+        get_nth_fibonacci(-1)
