@@ -74,7 +74,7 @@ def test_area_of_circle_two():
     """Test with radius 2."""
     radius = 2
     result = area_of_circle(radius)
-    assert abs(result - 12.56636) < 1e-5
+    assert abs(result - 12.56637) < 1e-5
 
 
 def test_get_nth_fibonacci_five():
@@ -82,3 +82,8 @@ def test_get_nth_fibonacci_five():
     n = 5
     result = get_nth_fibonacci(n)
     assert result == 5
+
+def test_get_nth_fibonacci_negative():
+    """Test negative input."""
+    with pytest.raises(ValueError):
+        get_nth_fibonacci(-1)
